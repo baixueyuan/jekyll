@@ -1,3 +1,4 @@
 name: Xueyuan's BLOG
 markdown: redcarpet
 pygments: true
+baseurl: /jekyll_demo
