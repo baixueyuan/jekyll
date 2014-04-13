@@ -18,7 +18,7 @@ title: 第一篇博客
 [Jekyll]: http://jekyllrb.com
 [Jekyllcn]: http://jekyllcn.com
 [Github]: https://github.com
-[VPS]: http://en.wikipedia.org/wiki/Virtual_private_server
+[VPS_wiki]: http://en.wikipedia.org/wiki/Virtual_private_server
 [aliyun]: http://www.aliyun.com
 [Vim]: http://www.vim.org
 [Markdown]: https://daringfireball.net
