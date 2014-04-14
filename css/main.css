@@ -30,7 +30,7 @@ h1 {
 p { margin: 1em 0; }
 
 a         { color: #dd0000; text-decoration: none; }
-a:hover   { color: #000; text-decoration: underline;}
+a:hover, strong a:hover   { color: #000; text-decoration: underline;}
 a:visited { color: #dd0000; text-decoration: none; }
 /*a:visited { color: #a0a; }*/
 
