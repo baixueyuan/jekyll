@@ -20,12 +20,18 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+  font-size: 120%;
+}
 
 h1 {
   font-size: 135%;
-  margin-bottom: 1em; }
-p { margin: 1em 0; }
+  margin-bottom: 1em;
+}
+
+p {
+  margin: 1em 0;
+  font-size: 120%;
+}
 
 a         { color: #dd0000; text-decoration: none; }
 a:hover, strong a:hover   { color: #000; text-decoration: underline;}
