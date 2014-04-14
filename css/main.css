@@ -3,7 +3,7 @@
 /* Common
 /*
 /*****************************************************************************/
-
+@import url(http://fonts.googleapis.com/css?family=Galdeano);
 /* Global Reset */
 * {
   margin: 0;
@@ -12,11 +12,9 @@
 
 html, body { height: 100%; }
 
-@import url(http://fonts.googleapis.com/css?family=Galdeano);
-
 body {
   background-color: #FFF;
-  font-family: "Galdeano"/*,"Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif*/;
+  font-family: "Galdeano","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
   font-size: 14px;
   text-align: center;
 }
