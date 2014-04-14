@@ -27,9 +27,7 @@ h2, h3, h4, h5, h6 {
 h1 {
   font-size: 135%;
   margin-bottom: 1em; }
-p { 
-  font-family: "Electrolize";
-  margin: 1em 0; }
+p { margin: 1em 0; }
 
 a         { color: #00a; }
 a:hover   { color: #000; }
