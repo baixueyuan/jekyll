@@ -29,9 +29,9 @@ h1 {
   margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #00a; }
+a         { color: #dd0000; text-decoration: none; }
+a:hover   { color: #000; text-decoration: underline;}
+a:visited { color: #dd0000; text-decoration: none; }
 /*a:visited { color: #a0a; }*/
 
 /*****************************************************************************/
