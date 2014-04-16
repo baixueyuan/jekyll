@@ -2,3 +2,4 @@ name: 林海雪原
 markdown: redcarpet
 pygments: true
 baseurl: /jekyll
+highlighter: pygments
