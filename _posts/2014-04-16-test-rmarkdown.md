@@ -40,6 +40,13 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
+```r
+a <- 35
+b <- a + 5 ^ y
+Sys.setlocale("LC_TIME","english")
+plot(unrate, main='US Unemployment From 2007')
+```
+
 ![plot of chunk unnamed-chunk-4](/jekyll/figure/unnamed-chunk-4.png) 
 
 
