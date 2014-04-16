@@ -37,6 +37,14 @@ You can also embed plots, for example:
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
+{% highlight r %}
+switch(x, 2+2, mean(1:10), rnorm(5))
+## Function, dot-dot-dot, return
+foo <- function(...) {
+    return(sum(...))
+}
+{% endhighlight %}
+
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
 ```r
