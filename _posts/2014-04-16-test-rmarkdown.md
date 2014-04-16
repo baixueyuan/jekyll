@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "test-rmarkdown"
 author: "Bai Xueyuan"
 date: "Wednesday, April 16, 2014"
