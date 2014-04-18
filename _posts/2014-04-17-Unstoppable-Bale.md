@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 逆天的贝尔
 tag: sports
 ---
