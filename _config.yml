@@ -1,4 +1,4 @@
 name: 林海雪原
-markdown: rdiscount
+markdown: kramdown
 baseurl: /jekyll
 highlighter: pygments
