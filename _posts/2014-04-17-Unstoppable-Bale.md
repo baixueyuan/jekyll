@@ -22,7 +22,13 @@ tag: sports
 
 说实话，这几年上班真的是没有条件看半夜的欧洲足球比赛，认识的人也越来越少，虽然喜欢的C罗、梅西、卡卡也算正当年，但前几天看CCTV-5的《天下足球》播出曼联92一代的专题片时，才发现贝克汉姆、吉格斯、斯科尔斯这些人已经不在了，再看看兰帕德和特里，不知道哪天也不在了，现在再去找找劳尔和皮埃罗肯定费点儿事儿。这个时候看到了聚光灯照射下的贝尔，因为他是皇马的巨星，比C罗还贵，所以不用半夜看球也能对他印象十分深刻。
 
-看过几次新闻，也偶尔看过比赛，比如前几天那场西甲国家德比，感觉贝尔真实腼腆，始终在C罗的光环之后，不争不抢，做好自己的事情。说实话，国家德比那场，贝尔表现不够抢眼。这使我想起卡卡，也为贝尔感到担心。卡卡的才华毋庸赘言，在AC米兰的成就也是登峰造极，在更进一步的时候，他没有在皇马找到感觉，最后在安切洛蒂来到皇马的时候他又回到了AC米兰，可是今天的卡卡已不是当年那个卡卡——岁月不饶人。希望贝尔在皇马**找到感觉**，而国王杯上的精彩绝不是昙花一现！
+看过几次新闻，也偶尔看过比赛，比如前几天那场西甲国家德比，感觉贝尔真实腼腆，始终在C罗的光环之后，不争不抢，做好自己的事情。说实话，国家德比那场，贝尔表现不够抢眼。这使我想起卡卡，也为贝尔感到担心。卡卡的才华毋庸赘言，在AC米兰的成就也是登峰造极，在更进一步的时候，他没有在皇马找到感觉，最后在安切洛蒂来到皇马的时候他又回到了AC米兰，可是今天的卡卡已不是当年那个卡卡——岁月不饶人。希望贝尔在皇马**找到感觉**，而国王杯上的精彩绝不是昙花一现！如果你对贝尔还缺乏感性认识，以看看[Nasty Tackle][NT]网站对他的评价：
+
+>So what makes Gareth Bale so special? Besides his blistering pace, Bale is known for his ability to execute pin-point crosses into the box.
+>
+>Bale is also famous for his dribbling skills and often beats defenders with his combination of speed, power and agility.
+>
+>Bale is also know for his set-piece ability and can score goals from free kicks.
 
 其实贝尔到底是不是**腼腆**我也不知道，只是少数的镜头看起来觉得他有点儿低调，只有拿到球的一瞬间变得不可一世。今年只有25岁的贝尔17岁时就开始了职业足球生涯，那时他在南安普顿队，是队史上第二年轻的球员（该对最年轻的是那个速度极快的沃尔科特）。而2006年加入南安普顿的贝尔仅用了一个赛季就证明了自己的能力和价值，2007年便以700万英镑转会托特纳姆热刺并签订四年的合约，此后在合约到期后的2012年，贝尔再度与热刺续签四年合约。从2012-2013赛季开始，原本作为左边卫的贝尔开始改为边锋，球衣号码也从**3**号改为**11**号，而进球数也从前几个赛季都低于10球提升到21球。
 
@@ -59,3 +65,4 @@ tag: sports
 [60m]: http://en.wikipedia.org/wiki/60_metres
 [Greene]: http://en.wikipedia.org/wiki/Maurice_Greene_(athlete)
 [Copa]: http://zh.wikipedia.org/wiki/%E8%A5%BF%E7%8F%AD%E7%89%99%E5%9C%8B%E7%8E%8B%E7%9B%83
+[NT]: http://nastytackle.com/gareth-bale-tottenham-hotspurs-speed-king
