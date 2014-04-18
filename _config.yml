@@ -1,4 +1,4 @@
 name: 林海雪原
-markdown: Maruku
+markdown: rdiscount
 baseurl: /jekyll
 highlighter: pygments
