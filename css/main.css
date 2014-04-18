@@ -173,6 +173,10 @@ a:visited { color: #dd0000; text-decoration: none; }
 /* TABLES
 =============================================================================*/
 
+table {
+  font-family: "Hiragino Sans GB","Microsoft YaHei",Tahoma,Verdana,sans-serif;
+}
+
 table th {
   font-weight: bold;
   background-color: #f8f8f8;
