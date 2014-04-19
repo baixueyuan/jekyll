@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 第一篇博客
 ---
 
