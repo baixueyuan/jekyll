@@ -1,10 +1,22 @@
 ---
 layout: default
 ---
+
 <h1>{{ page.title }}</h1>
-<p class="meta">{{ page.date | date_to_string }}</p>
-<p class="meta">{{ page.tags }}</p>
+
+<p class="meta">{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;
+
+{{% if page.tags %}}
+  <span class="tag">标签：
+    {{% for tag in page.tags %}}
+      {{ tags }}&nbsp;
+    {{% endfor %}}
+  </span>
+</p>
+{{% endif %}}
 
 <div class="post">
+
 {{ content }}
+  
 </div>
