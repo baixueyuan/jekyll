@@ -7,7 +7,7 @@ tags: [计算机, 操作系统]
 2014年4月8日，微软终于最终停止了对Windows XP的更新服务。延续了12年的经典操作系统终于“officially”走到了生命的尽头。下面的网页截图是微软的官方声明。
 
 <a href="http://windows.microsoft.com/zh-cn/windows/end-support-help/">
-<img src="/jekyll/MSannouncement.png">
+<img src="/jekyll/figure/MSannouncement.png">
 </a>
 
 Windows XP绝对是一款经典的操作系统，没有必要从技术的层面去分析，这个恐怕绝大多数的人都做不到，也没什么意义，但众多人多年的使用，就说明了一切。在这样的一个时点，可以对这件事去回顾和思考，更多的是面向未来。
