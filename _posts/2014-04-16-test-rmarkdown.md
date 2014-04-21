@@ -45,12 +45,14 @@ foo <- function(...) {
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
-```r
+{% highlight r %}
+x = 1:10
+length(x = 1:10)
 a <- 35
 b <- a + 5 ^ y
 Sys.setlocale("LC_TIME","english")
 plot(unrate, main='US Unemployment From 2007')
-```
+{% endhighlight %}
 
 ![plot of chunk unnamed-chunk-4](/jekyll/figure/unnamed-chunk-4.png) 
 
