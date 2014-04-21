@@ -233,4 +233,6 @@ table tr:nth-child(2n) {
 
 img {
   width: 480px;
+  margin-right: auto;
+  margin-left: auto;
 }
