@@ -79,6 +79,11 @@ a:visited { color: #dd0000; text-decoration: none; }
   text-decoration: none;
 }
 
+.header a.extra {
+  display: block;
+  float: right;
+}
+
 .title {
   display: inline-block;
   margin-bottom: 2em;
@@ -103,6 +108,10 @@ a:visited { color: #dd0000; text-decoration: none; }
 
 .meta {
   color: #aaa;
+}
+
+.tag {
+  font-size: 90%;
 }
 
 .footer {
@@ -218,7 +227,7 @@ table tr:nth-child(2n) {
 
 /*****************************************************************************/
 /*
-/* Site
+/* Image
 /*
 /*****************************************************************************/
 
