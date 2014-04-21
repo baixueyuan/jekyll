@@ -150,6 +150,8 @@ a:visited { color: #dd0000; text-decoration: none; }
 }
 
 .post code {
+  font-size: 14px;
+  font-family: "Andale Mono";
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .2em;
