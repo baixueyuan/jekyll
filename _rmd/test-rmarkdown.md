@@ -11,30 +11,20 @@ tags: [english, R, markdown, RStudio]
 
 ```r
 library(Quandl)
-```
-
-```
-## Error: there is no package called 'Quandl'
-```
-
-```r
 Quandl.auth(key)
-```
-
-```
-## Error: could not find function "Quandl.auth"
-```
-
-```r
 unrate <- Quandl("FRED/UNRATE", type = "xts", start_date = "2007-01-01")
-```
-
-```
-## Error: could not find function "Quandl"
 ```
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
+
+
+```
+## [1] "GS"
+```
+
+![plot of chunk quantm](../figure/quantm.png) 
+
 
 http://rmarkdown.rstudio.com
 
