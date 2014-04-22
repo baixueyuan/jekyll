@@ -150,7 +150,7 @@ a:visited { color: #dd0000; text-decoration: none; }
 /* standard */
 .post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #f8f8f8;
   padding: 0 .4em;
 }
 
@@ -162,7 +162,7 @@ a:visited { color: #dd0000; text-decoration: none; }
   font-size: 14px;
   font-family: Andale Mono, monospace;
   border: 1px solid #ddd;
-  background-color: #eef;
+  background-color: #f8f8f8;
   padding: 0 .2em;
 }
 
