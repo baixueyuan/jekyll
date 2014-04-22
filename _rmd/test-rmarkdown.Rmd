@@ -5,8 +5,9 @@ tags: [english, R, markdown, RStudio]
 ---
 
 ```{r, echo=FALSE, cache=TRUE, include=FALSE}
+# knitr::knit('_rmd/test-rmarkdown.Rmd', '_posts/2014-04-15-test-rmarkdown.md')
 library(quantmod)
-#setwd('..')
+if (length(grep('_rmd$', getwd()))) setwd('..')
 key <- 'xQzcigwGzfxz7HTbv9vB'
 getSymbols('GS', warnings = FALSE, quiet=TRUE)
 ```
