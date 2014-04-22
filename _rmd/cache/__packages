@@ -1,2 +1,7 @@
 base
+Defaults
 knitr
+quantmod
+TTR
+xts
+zoo

@@ -13,11 +13,6 @@ tags: [english, R, markdown, RStudio]
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
 
-
-```
-## [1] "GS"
-```
-
 ![plot of chunk quantm](../figure/quantm.png) 
 
 

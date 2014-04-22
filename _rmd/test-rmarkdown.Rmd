@@ -4,8 +4,10 @@ title: Test R Markdown
 tags: [english, R, markdown, RStudio]
 ---
 
-```{r, echo=FALSE, cache=TRUE}
+```{r, echo=FALSE, cache=TRUE, include=FALSE}
 key <- 'xQzcigwGzfxz7HTbv9vB'
+library(quantmod)
+getSymbols('GS', warnings = FALSE, quiet=TRUE)
 ```
 
 
@@ -19,8 +21,6 @@ unrate <- Quandl('FRED/UNRATE', type='xts', start_date='2007-01-01')
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
 
 ```{r quantm, echo=FALSE, warning=FALSE, message=FALSE, fig.path='../figure/', render_jekyll=TRUE}
-library(quantmod)
-getSymbols('GS')
 chartSeries(GS)
 ```
 
