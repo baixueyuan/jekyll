@@ -181,6 +181,10 @@ a:visited { color: #dd0000; text-decoration: none; }
   background-color: #333;
 }
 
+.highlight {
+  margin-bottom: 5px;
+}
+
 /* QUOTES
 =============================================================================*/
 
