@@ -1,0 +1,14 @@
+base
+datasets
+Defaults
+graphics
+grDevices
+knitr
+methods
+Quandl
+quantmod
+stats
+TTR
+utils
+xts
+zoo
