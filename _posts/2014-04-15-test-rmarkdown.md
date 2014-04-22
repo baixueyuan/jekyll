@@ -13,7 +13,7 @@ tags: [english, R, markdown, RStudio]
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
 
-![plot of chunk quantm](/jekyll/figure/quantm.png) 
+![plot of chunk quantm](jekyll/figure/quantm.png) 
 
 
 http://rmarkdown.rstudio.com
@@ -40,7 +40,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-![plot of chunk cars](/jekyll/figure/cars.png) 
+![plot of chunk cars](jekyll/figure/cars.png) 
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
@@ -55,7 +55,7 @@ mat <- matrix(rnorm(a * b), nrow = a)
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
-![plot of chunk unrate](/jekyll/figure/unrate.png) 
+![plot of chunk unrate](jekyll/figure/unrate.png) 
 
 
 [FRED]: http://research.stlouisfed.org/fred2/

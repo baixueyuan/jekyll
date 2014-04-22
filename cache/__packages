@@ -1,8 +1,0 @@
-base
-Defaults
-knitr
-Quandl
-quantmod
-TTR
-xts
-zoo
