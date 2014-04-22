@@ -47,11 +47,11 @@ b <- 30
 mat <- matrix(rnorm(a * b), nrow = a)
 ```
 
-{{% highlight r %}}
+{% highlight r %}
 a <- 20
 b <- 30
 mat <- matrix(rnorm(a * b), nrow = a)
-{{% endhighlight %}}
+{% endhighlight %}
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
