@@ -22,7 +22,7 @@ When you click the **Knit** button a document will be generated that includes bo
 {% highlight r %}
 summary(cars)
 {% endhighlight %}
-
+<br />
 {% highlight r %}
      speed           dist    
  Min.   : 4.0   Min.   :  2  
@@ -35,7 +35,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-![plot of chunk cars](figure/cars.png) 
+![plot of chunk cars](/jekyll/figure/cars.png) 
 
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
@@ -44,7 +44,7 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
-![plot of chunk unrate](figure/unrate.png) 
+![plot of chunk unrate](/jekyll/figure/unrate.png) 
 
 
 [FRED]: http://research.stlouisfed.org/fred2/
