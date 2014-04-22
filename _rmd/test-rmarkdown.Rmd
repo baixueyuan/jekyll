@@ -9,15 +9,16 @@ key <- 'xQzcigwGzfxz7HTbv9vB'
 ```
 
 
-```{r, render_jekyll=TRUE}
+```{r, echo=FALSE, render_jekyll=TRUE}
 library(Quandl)
+library(zoo)
 Quandl.auth(key)
 unrate <- Quandl('FRED/UNRATE', type='xts', start_date='2007-01-01')
 ```
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
 
-```{r quantm, echo=FALSE, fig.path='../figure/', render_jekyll=TRUE}
+```{r quantm, echo=FALSE, warning=FALSE, message=FALSE, fig.path='../figure/', render_jekyll=TRUE}
 library(quantmod)
 getSymbols('GS')
 chartSeries(GS)
