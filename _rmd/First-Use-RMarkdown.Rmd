@@ -1,0 +1,15 @@
+---
+layout: post
+title: First Use of R and RMarkdown
+tags: [R, markdown, RStudio]
+---
+
+### 使用R和Rmarkdown的基本套路
+
+### 在Rmd文件中加入R区块来运行代码
+
+### 在输出的md文件中保证使用pygments的highlight
+
+### 图形输出
+
+### 进一步学习knitr和语法高亮
