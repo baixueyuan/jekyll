@@ -23,9 +23,6 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```r
 summary(cars)
-```
-
-```
 ##      speed           dist    
 ##  Min.   : 4.0   Min.   :  2  
 ##  1st Qu.:12.0   1st Qu.: 26  
