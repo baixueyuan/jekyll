@@ -48,12 +48,6 @@ paste("The result is ", a * b, ".", sep = "")
 
 在Jekyll中的语法高亮使用的是**pygments**，当然要在`_config.yml`设置`pygments: true`来开启pygments。在md文件中如果要让Jekyll准确使用pygments，就要使用Liquid标签`{% highlight lang %}`和`{% endhighlight %}`，其中`lang`换成高亮的语言名称，具体还要查找pygments网站。对于R语言来说就是：
 
-```
-{% highlight lang %}
-any code ...
-{% endhighlight %}
-```
-
 *注意*，这里一直说的是md文件，而不是Rmd文件，因此在写Rmd文件并转换时需要使用到输出钩子函数`render_jekyll`，也就是在运行`knit`之前先运行这个函数：
 
 {% highlight r %}
