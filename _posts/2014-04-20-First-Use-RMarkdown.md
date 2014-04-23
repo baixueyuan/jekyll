@@ -65,9 +65,4 @@ knit(input, output)
 
 此外，我发现一个小问题，就是我一直使用的默认的Jekyll网站模板，自己做过小的修改，但是在语法高亮时，Jekyll会将代码和结果分成两个代码块输出，但最后的HTML页面中没有空隙，其实每个代码区块都是用`<div class="highlight">`包围，因此给`margin`加点儿距离就好。
 
-{% highlight css %}
-.highlight {
-  margin-bottom: 5px;
-}
-{% endhighlight %}
 
