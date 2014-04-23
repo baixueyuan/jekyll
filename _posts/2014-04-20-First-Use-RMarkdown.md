@@ -40,6 +40,16 @@ paste("The result is ", a * b, ".", sep = "")
 
 其中的`{r}`表示下面的代码是R代码，此处最好标签（label），可以标识这段代码，例如`{r first-chunk}`，输出的图形可以以此命名，当然标签的作用还有很多。标签还可以通过`options$label`来访问。
 
+### 在输出的md文件中保证使用pygments的highlight
+
+在Jekyll中的语法高亮使用的是**pygments**，当然要在`_config.yml`设置`pygments: true`来开启pygments。在md文件中如果要让Jekyll准确使用pygments，就要使用Liquid标签`{% highlight lang %}`和`{% endhighlight %}`，其中`lang`换成高亮的语言名称，具体还要查找pygments网站。对于R语言来说就是：
+
+{% highlight text %}
+{% highlight lang %}
+any code ...
+{% endhighlight %}
+{% endhighlight %}
+
 ### 图形输出
 
 图形输出应该是使用RMarkdown最重要的功能之一了，因为使用RMarkdown可能不是为了研究编程之类的，而是直接写一些报告，而图形作为一种输出，也就是说最终的页面呈现的是一幅或者多幅配图，但没有任何R代码，也就是说R只是作为页面的后台支持。
