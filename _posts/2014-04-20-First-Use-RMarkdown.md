@@ -4,12 +4,6 @@ title: First Use of R and RMarkdown
 tags: [R, markdown, RStudio, knitr, 统计, 研究, 可重复研究]
 ---
 
-
-
-
-
-
-
 在前面的“第一篇博客”一文中已经提到：
 
 > 本人还是一个R语言爱好者，以后的很多东西估计都离不开它。
@@ -108,7 +102,6 @@ chartSeries(GS, theme='white')
 {% endhighlight %}
 
 ![plot](/jekyll/figure/2014-04-14-candlestick.png)
-
 
 ### 进一步学习knitr和语法高亮
 
