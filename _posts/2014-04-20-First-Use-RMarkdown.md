@@ -20,3 +20,27 @@ RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输�
 
 以用Jekyll和Github写博客为例，因为实际需要的只是一个可供Jekyll转化的md文件，因此正常写Rmd文件（RStudio的新建文件类型之一）就可以了，然后使用knit进行转换成为md文件即可，最后将md文件和图片等附属文件推送到Github即可。应该说，套路就这么简单，完全可以直接写博客，即可以写教程，也可以做研究，写可以写报告，很方便。但也有些小问题需要在使用之前处理好。
 
+### 在Rmd文件中加入R区块来运行代码
+
+首先要讨论的一个问题就是Rmd的YAML头信息。Rmd和md文件都是有YAML头信息的，其中Rmd的YAML头信息主要用于转换为HTML、PDF和Word等文档使用个，Rmarkdown网站上有详细探讨。而md文件尽管一般不需要YAML头信息，但是用于Jekyll网站就是必须的了，否则不能转换为HTML文件，一般像如下这个样子。
+
+实际上，在使用knit函数的时候只针对R区块，因此这部分头信息可以被忽略，正常写就好了，不会影响到输出的md文件在Jekyll中被转换。
+
+在Rmd中加入R区块非常简单，只需要加入`{r}`和并在中间写入代码就可以了，下面是一个最简单的例子。
+
+
+{% highlight r %}
+a <- 20
+b <- 30
+paste("The result is ", a * b, ".", sep = "")
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [1] "The result is 600."
+{% endhighlight %}
+
+
+其中的`{r}`表示下面的代码是R代码，此处最好标签（label），可以标识这段代码，例如`{r first-chunk}`，输出的图形可以以此命名，当然标签的作用还有很多。标签还可以通过`options$label`来访问。
+
