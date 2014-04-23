@@ -4,25 +4,11 @@ title: First Use of R and RMarkdown
 tags: [R, markdown, RStudio, knitr, 统计, 研究, 可重复研究]
 ---
 
-```{r hookwrapper, echo=FALSE}
-knit_hooks$set(addfile = function(before, options, envir) {
-  if (!before) {    ## after a chunk has been evaluated
-    name = paste('/jekyll/figure/', options$label, '.png', sep = '')
-    return(paste('![plot](', name, ')', sep=''))
-  }})
-knit_hooks$set(wrapper = function(before, options, envir) {
-  if (before) {
-    sprintf('    ```{r %s}\n', options$params.src)
-  } else '    ```\n'
-})
-```
 
-```{r, echo=FALSE, cache=TRUE, include=FALSE}
-library(quantmod)
-getSymbols('GS', warnings = FALSE, quiet=TRUE)
-GS <- GS['2014-01-01/']
-Sys.setlocale("LC_TIME","english")
-```
+
+
+
+
 
 在前面的“第一篇博客”一文中已经提到：
 
@@ -56,11 +42,19 @@ tags: [tag1, tag2, tag3]
 
 在Rmd中加入R区块非常简单，只需要加入````{r}`和`````并在中间写入代码就可以了，下面是一个最简单的例子。
 
-```{r simple-example}
+
+{% highlight r %}
 a <- 20
 b <- 30
-paste('The result is ', a * b, '.', sep='')
-```
+paste("The result is ", a * b, ".", sep = "")
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## [1] "The result is 600."
+{% endhighlight %}
+
 
 其中的`{r}`表示下面的代码是R代码，此处最好标签（label），可以标识这段代码，例如`{r first-chunk}`，输出的图形可以以此命名，当然标签的作用还有很多。标签还可以通过`options$label`来访问。
 
@@ -121,9 +115,8 @@ chartSeries(GS, theme='white')
 
 {% endhighlight %}
 
-```{r 2014-04-14-candlestick, echo=FALSE, fig.path='../figure/', fig.show='hide', fig.height=6, fig.width=6.5, addfile=TRUE}
-chartSeries(GS, theme='white')
-```
+![plot](/jekyll/figure/2014-04-14-candlestick.png)
+
 
 ### 进一步学习knitr和语法高亮
 

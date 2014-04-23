@@ -17,7 +17,7 @@ getSymbols('GS', warnings = FALSE, quiet=TRUE)
 ```
 
 
-```{r, echo=FALSE, render_jekyll=TRUE}
+```{r, echo=FALSE}
 library(Quandl)
 library(zoo)
 Quandl.auth(key)
@@ -26,7 +26,7 @@ unrate <- Quandl('FRED/UNRATE', type='xts', start_date='2007-01-01')
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see:
 
-```{r quantm, echo=FALSE, fig.path='../figure/', render_jekyll=TRUE, fig.show='hide', addfile=TRUE}
+```{r quantm, echo=FALSE, fig.path='../figure/', fig.show='hide', addfile=TRUE}
 chartSeries(GS)
 ```
 
@@ -34,19 +34,19 @@ http://rmarkdown.rstudio.com
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r carssumm, render_jekyll=TRUE}
+```{r carssumm}
 summary(cars)
 ```
 
 You can also embed plots, for example:
 
-```{r cars, echo=FALSE, fig.path='../figure/', render_jekyll=TRUE, fig.show='hide', addfile=TRUE}
+```{r cars, echo=FALSE, fig.path='../figure/', fig.show='hide', addfile=TRUE}
 plot(cars)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-```{r, render_jekyll=TRUE}
+```{r}
 a <- 20
 b <- 30
 mat <- matrix(rnorm(a * b), nrow = a)
@@ -54,7 +54,7 @@ mat <- matrix(rnorm(a * b), nrow = a)
 
 The following graph uses Quandl fetching data from the Web (specifically from [FRED][FRED]), and then plot the US unemployment from 2007 to present.
 
-```{r unrate, echo=FALSE, warning=FALSE, render_jekyll=TRUE, fig.path='../figure/', fig.height=4, fig.width=8, dev.args=list(bg='yellow', pointsize=10), fig.show='hide', addfile=TRUE}
+```{r unrate, echo=FALSE, warning=FALSE, fig.path='../figure/', fig.height=4, fig.width=8, dev.args=list(bg='yellow', pointsize=10), fig.show='hide', addfile=TRUE}
 par(bg = 'white')
 plot(unrate, main='US Unemployment Rate From 2007')
 ```
