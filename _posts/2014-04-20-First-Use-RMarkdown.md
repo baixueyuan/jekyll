@@ -40,6 +40,38 @@ paste("The result is ", a * b, ".", sep = "")
 
 其中的`{r}`表示下面的代码是R代码，此处最好标签（label），可以标识这段代码，例如`{r first-chunk}`，输出的图形可以以此命名，当然标签的作用还有很多。标签还可以通过`options$label`来访问。
 
+### 图形输出
+
+图形输出应该是使用RMarkdown最重要的功能之一了，因为使用RMarkdown可能不是为了研究编程之类的，而是直接写一些报告，而图形作为一种输出，也就是说最终的页面呈现的是一幅或者多幅配图，但没有任何R代码，也就是说R只是作为页面的后台支持。
+
+R包knitr已经提供了对于图形输出的很好的支持，有非常多的参数可以进行个性化修饰。这里谈谈我的应用，其实我们用R绘图并输出的目的是要加入一条Markdown标记插入一幅图，因此代码本身是不需要的，故设置`echo=FALSE`。
+
+还有一个问题就是输出路径，输出路径包含两个问题：
+
+- 图形的输出路径，也就是实际图形的存储位置，这个在运行`knit`函数将Rmd文件转为md文件时的路径有关，一般来说我们将图片同一存储在网站中专门的目录中，我是存储在根目录下`figure/`目录下。如果转为md文件时就在根目录下，那么参数`fig.path`就不用设置了，而如我是在根目录下专门建立了一个`_rmd/`目录来存放和写Rmd文件，因此要设置`fig.path='../figure/'`，这样就向后退一级目录再存在根目录下`figure/`目录中。
+
+- Markdown插入图形的路径，也就是用`![]()`插入图形的路径，因为这个路径最终要转换为可以指向根目录下`figure/`目录中图片的位置。对于Github Pages来说，我是建立了一个jekyll分支存放Jekyll网页文件，因此图形网址一定是类似于`/jekyll/figure/plot.png`，但是貌似这个反斜杠无法通过参数`fig.path`来加入。
+
+对于后一个问题，knitr包是预留了办法的，那就是让区块不输出任何内容，而用钩子函数（hook function）来插入markdown代码。对于不让区块显示结果可以设置`echo=FALSE, fig.show='hide',`，这样就不会显示任何内容，但图片仍然输出。至于钩子函数，可以根据knitr包网站的介绍来写一个：
+
+{% highlight r %}
+knit_hooks$set(addfile = function(before, options, envir) {
+  if (!before) {    ## after a chunk has been evaluated
+    name = paste('/jekyll/figure/', options$label, '.png', sep = '')
+    return(paste('![plot](', name, ')', sep=''))
+  }})
+{% endhighlight %}
+
+这里就是用到了`options$label`，因为输出的文件名也是用这个标签来命名的。下面就是一个例子，此处给出了代码，这个例子用quantmod包提取了高升公司的股价数据，并绘制K线图。
+
+{% highlight r %}
+```{r, echo=FALSE, fig.path='../figure/', fig.show='hide', addfile=TRUE}
+chartSeries(GS, theme='white')
+```
+{% endhighlight %}
+
+![plot](/jekyll/figure/2014-04-14-candlestick.png)
+
 ### 进一步学习knitr和语法高亮
 
 本文所使用的knitr功能还不是很多，未来还有很多要探讨，但说回来还是要服务于需要，当需求比较稳定的时候，只要摸索出一套常用的设置就可以了，也没必要研究得太细，一些地方也可以hack一下，没必要搞得太清楚，目的就是自动化输出我们想要的结果就完事大吉。
