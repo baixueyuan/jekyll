@@ -1,5 +1,4 @@
 name: 林海雪原
 markdown: rdiscount
 baseurl: /jekyll
-highlighter: pygments
-remove_block_html_tags: true
+pygments: true
