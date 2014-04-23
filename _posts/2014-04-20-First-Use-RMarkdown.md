@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First Use of R and RMarkdown
+title: 开始使用R和RMarkdown
 tags: [R, markdown, RStudio, knitr, 统计, 研究, 可重复研究]
 ---
 
