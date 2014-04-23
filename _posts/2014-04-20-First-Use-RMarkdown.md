@@ -44,19 +44,4 @@ paste("The result is ", a * b, ".", sep = "")
 
 其中的`{r}`表示下面的代码是R代码，此处最好标签（label），可以标识这段代码，例如`{r first-chunk}`，输出的图形可以以此命名，当然标签的作用还有很多。标签还可以通过`options$label`来访问。
 
-### 在输出的md文件中保证使用pygments的highlight
-
-在Jekyll中的语法高亮使用的是**pygments**，当然要在`_config.yml`设置`pygments: true`来开启pygments。在md文件中如果要让Jekyll准确使用pygments，就要使用Liquid标签`{% highlight lang %}`和`{% endhighlight %}`，其中`lang`换成高亮的语言名称，具体还要查找pygments网站。对于R语言来说就是：
-
-*注意*，这里一直说的是md文件，而不是Rmd文件，因此在写Rmd文件并转换时需要使用到输出钩子函数`render_jekyll`，也就是在运行`knit`之前先运行这个函数：
-
-{% highlight r %}
-render_jekyll()
-knit(input, output)
-{% endhighlight %}
-
-这样得到的md文件中区块代码都是用Liquid标签包住的，就可以使用pygments进行高亮了，实际就是给代码各个部分加上带有class的`<span>`标签，可以去下载模板CSS来更换高亮效果，也可以直接修改`/css/syntax.css`文件。
-
-此外，我发现一个小问题，就是我一直使用的默认的Jekyll网站模板，自己做过小的修改，但是在语法高亮时，Jekyll会将代码和结果分成两个代码块输出，但最后的HTML页面中没有空隙，其实每个代码区块都是用`<div class="highlight">`包围，因此给`margin`加点儿距离就好。
-
 
