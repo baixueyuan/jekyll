@@ -6,10 +6,7 @@ layout: default
 
 <p class="meta">{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;
 
-{% if page.tags == 1 %}
-  <span class="tag">tags:&nbsp;{{ tag }}</span>
-{% endif %}
-
+{{ page.tags | last }}
 {% if page.tags %}
 <span class="tag">tags:{{ page.tags }}&nbsp;
     {% for tag in page.tags %}
