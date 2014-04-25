@@ -10,6 +10,7 @@ layout: default
 <span class="tag">tags:&nbsp;
     {% for tag in page.tags %}
       {% assign lastone = page.tags | last %}
+
       {% if tag == lastone %}
       <span class="tag">{{ tag }}</span>
       {% else %}
@@ -22,7 +23,7 @@ layout: default
 </p>
 
 <div class="post">
-	{{ lastone }}
+
 {{ content }}
   
 </div>
