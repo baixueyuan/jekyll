@@ -10,7 +10,11 @@ layout: default
 {% if page.tags %}
 <span class="tag">tags:&nbsp;
     {% for tag in page.tags %}
+    {% if tag == {{ page.tags | last }}%}
+      <span class="tag">{{ tag }}</span>
+      {% else %}
       <span class="tag">{{ tag }}&nbsp;|&nbsp;</span>
+      {% endif %}
     {% endfor %}
   </span>
 {% endif %}
