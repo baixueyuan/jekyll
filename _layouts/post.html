@@ -11,7 +11,7 @@ layout: default
 {% endif %}
 
 {% if page.tags %}
-  <span class="tag">tags:&nbsp;
+<span class="tag">tags:{{ page.tags }}&nbsp;
     {% for tag in page.tags %}
       <span class="tag">{{ tag }}&nbsp;|&nbsp;</span>
     {% endfor %}
