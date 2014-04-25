@@ -6,14 +6,19 @@ layout: default
 
 <p class="meta">{{ page.date | date_to_string }}&nbsp;&nbsp;&nbsp;&nbsp;
 
+{% if page.tags == 1 %}
+  <span class="tag">tags:&nbsp;{{ tag }}</span>
+{% endif %}
+
 {% if page.tags %}
   <span class="tag">tags:&nbsp;
     {% for tag in page.tags %}
       <span class="tag">{{ tag }}&nbsp;|&nbsp;</span>
     {% endfor %}
   </span>
-</p>
 {% endif %}
+
+</p>
 
 <div class="post">
 
