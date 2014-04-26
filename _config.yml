@@ -1,7 +1,7 @@
 name: 林海雪原
 markdown: rdiscount
 rdiscount:
-  extension:
+  extensions:
     - autolink
     - footnotes
     - smart
