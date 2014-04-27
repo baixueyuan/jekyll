@@ -85,16 +85,17 @@ a:visited { color: #dd0000; text-decoration: none; }
 }
 
 .title {
+  font-size: 180%;
   display: inline-block;
   margin-bottom: 2em;
 }
 
 .title a {
-  color: #a00;
+  color: #8B0000;
 }
 
 .title a:hover {
-  color: #000;
+  color: #CD3333;
 }
 
 .header a.extra {

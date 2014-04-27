@@ -129,3 +129,6 @@ chartSeries(GS, theme='white')
 [liquid]: http://docs.shopify.com/themes/liquid-basics
 [pyg]: http://pygments.org/
 [style]: https://github.com/richleland/pygments-css
+[git]: https://github.com
+[pandoc]: http://johnmacfarlane.net/pandoc/
+[tutor]: http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html
