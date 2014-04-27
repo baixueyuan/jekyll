@@ -29,18 +29,18 @@ RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输�
 在Rmd中加入R区块非常简单，只需要加入`{r}`和并在中间写入代码就可以了，下面是一个最简单的例子。
 
 
+{% highlight r %}
 {% raw %}
 ```{r}
 {% endraw %}
-{% highlight r %}
 a <- 20
 b <- 30
 paste("The result is ", a * b, ".", sep = "")
-{% endhighlight %}
-
 {% raw %}
 ```
 {% endraw %}
+{% endhighlight %}
+
 
 
 {% highlight text %}
