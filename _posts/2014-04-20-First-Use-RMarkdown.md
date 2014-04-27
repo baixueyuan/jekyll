@@ -4,7 +4,7 @@ title: 开始使用R和RMarkdown
 tags: [R, markdown, RStudio, knitr, 统计, 研究, 可重复研究]
 ---
 
-在前面的“第一篇博客”一文中已经提到：
+在前面的“[第一篇博客][firstblog]”一文中已经提到：
 
 > 本人还是一个R语言爱好者，以后的很多东西估计都离不开它。
 
@@ -12,13 +12,13 @@ tags: [R, markdown, RStudio, knitr, 统计, 研究, 可重复研究]
 
 ### 使用R和Rmarkdown的基本套路
 
-虽然接触R很早，但是不美的东西还是不能吸引人啊，而且以前要么是用Notepad++加插件，要么就是用Tinn-R，相比今天大家都在用的RStudio，实在是有差距。其实RStudio也是一步步走来的，还记得一开始用的时候感觉眼前一亮，但是用着用着就发现问题很多。当然，今天的RStudio已经不可同日而语，不过我觉得软件本身的改进只是一个方面，更重要的是RStudio开始构建使用R的一个全新生态。它对于R、Git、knitr的整合是最大的优势，而现在又包含了Shiny和RMarkdown等牛逼的东西，今天就先来说说RMarkdown。
+虽然接触R很早，但是不美的东西还是不能吸引人啊，而且以前要么是用[Notepad++][npp]加[插件][npptor]，要么就是用[Tinn-R][tinnr]，相比今天大家都在用的[RStudio][rstudio]，实在是有差距。其实RStudio也是一步步走来的，还记得一开始用的时候感觉眼前一亮，但是用着用着就发现问题很多。当然，今天的RStudio已经不可同日而语，不过我觉得软件本身的改进只是一个方面，更重要的是RStudio开始构建使用R的一个全新生态。它对于R、[Git][git]、[knitr][knitr]的整合是最大的优势，而现在又包含了[Shiny][shiny]和[RMarkdown][rmd]等牛逼的东西，今天就先来说说RMarkdown。
 
-其实RMarkdown对于我来说也不算全新，因为已经开始使用knitr了，这个包的作者居然是自己同校同级的校友，很是佩服，比较欣赏他自称对于美的强迫症。
+其实RMarkdown对于我来说也不算全新，因为已经开始使用knitr了，这个包的[作者][yihui]居然是自己同校同级的校友，很是佩服，比较欣赏他自称对于美的强迫症。
 
-RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输出各种需要的格式，我大概看了下，对于嵌入的R代码区块的处理当然是使用knitr，而文档格式转换是用的pandoc。这个包我不会用，但是感觉RStudio已经把它整合好了，没必要学了。
+RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输出各种需要的格式，我大概看了下，对于嵌入的R代码区块的处理当然是使用knitr，而文档格式转换是用的[pandoc][pandoc]。这个包我不会用，但是感觉RStudio已经把它整合好了，没必要学了。
 
-以用Jekyll和Github写博客为例，因为实际需要的只是一个可供Jekyll转化的md文件，因此正常写Rmd文件（RStudio的新建文件类型之一）就可以了，然后使用knit进行转换成为md文件即可，最后将md文件和图片等附属文件推送到Github即可。应该说，套路就这么简单，完全可以直接写博客，即可以写教程，也可以做研究，写可以写报告，很方便。但也有些小问题需要在使用之前处理好。
+以用Jekyll和Github[写博客][tutor]为例，因为实际需要的只是一个可供Jekyll转化的md文件，因此正常写Rmd文件（RStudio的新建文件类型之一）就可以了，然后使用knit进行转换成为md文件即可，最后将md文件和图片等附属文件推送到Github即可。应该说，套路就这么简单，完全可以直接写博客，即可以写教程，也可以做研究，写可以写报告，很方便。但也有些小问题需要在使用之前处理好。
 
 ### 在Rmd文件中加入R区块来运行代码
 
@@ -29,12 +29,18 @@ RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输�
 在Rmd中加入R区块非常简单，只需要加入`{r}`和并在中间写入代码就可以了，下面是一个最简单的例子。
 
 
+{% raw %}
+```{r}
+{% endraw %}
 {% highlight r %}
 a <- 20
 b <- 30
 paste("The result is ", a * b, ".", sep = "")
 {% endhighlight %}
 
+{% raw %}
+```
+{% endraw %}
 
 
 {% highlight text %}
@@ -46,7 +52,7 @@ paste("The result is ", a * b, ".", sep = "")
 
 ### 在输出的md文件中保证使用pygments的highlight
 
-在Jekyll中的语法高亮使用的是**pygments**，当然要在`_config.yml`设置`pygments: true`来开启pygments。在md文件中如果要让Jekyll准确使用pygments，就要使用Liquid标签`{% raw %}{% highlight lang %}{% endraw %}`和`{% raw %}{% endhighlight %}{% endraw %}`，其中`lang`换成高亮的语言名称，具体还要查找pygments网站。对于R语言来说就是：
+在Jekyll中的语法高亮使用的是**pygments**，当然要在`_config.yml`设置`pygments: true`来开启pygments。在md文件中如果要让Jekyll准确使用pygments，就要使用[Liquid][liquid]标签`{% raw %}{% highlight lang %}{% endraw %}`和`{% raw %}{% endhighlight %}{% endraw %}`，其中`lang`换成高亮的语言名称，具体还要查找[pygments][pyg]网站。对于R语言来说就是：
 
 {% highlight text %}
 {% raw %}
@@ -63,7 +69,7 @@ render_jekyll()
 knit(input, output)
 {% endhighlight %}
 
-这样得到的md文件中区块代码都是用Liquid标签包住的，就可以使用pygments进行高亮了，实际就是给代码各个部分加上带有class的`<span>`标签，可以去下载模板CSS来更换高亮效果，也可以直接修改`/css/syntax.css`文件。
+这样得到的md文件中区块代码都是用Liquid标签包住的，就可以使用pygments进行高亮了，实际就是给代码各个部分加上带有class的`<span>`标签，可以去下载模板[CSS][sytle]来更换高亮效果，也可以直接修改`/css/syntax.css`文件。
 
 此外，我发现一个小问题，就是我一直使用的默认的Jekyll网站模板，自己做过小的修改，但是在语法高亮时，Jekyll会将代码和结果分成两个代码块输出，但最后的HTML页面中没有空隙，其实每个代码区块都是用`<div class="highlight">`包围，因此给`margin`加点儿距离就好。
 
@@ -85,7 +91,7 @@ R包knitr已经提供了对于图形输出的很好的支持，有非常多的�
 
 - Markdown插入图形的路径，也就是用`![]()`插入图形的路径，因为这个路径最终要转换为可以指向根目录下`figure/`目录中图片的位置。对于Github Pages来说，我是建立了一个jekyll分支存放Jekyll网页文件，因此图形网址一定是类似于`/jekyll/figure/plot.png`，但是貌似这个反斜杠无法通过参数`fig.path`来加入。
 
-对于后一个问题，knitr包是预留了办法的，那就是让区块不输出任何内容，而用钩子函数（hook function）来插入markdown代码。对于不让区块显示结果可以设置`echo=FALSE, fig.show='hide',`，这样就不会显示任何内容，但图片仍然输出。至于钩子函数，可以根据knitr包网站的介绍来写一个：
+对于后一个问题，knitr包是预留了办法的，那就是让区块不输出任何内容，而用钩子函数（hook function）来插入markdown代码。对于不让区块显示结果可以设置`echo=FALSE, fig.show='hide',`，这样就不会显示任何内容，但图片仍然输出。至于钩子函数，可以根据[knitr][knitr]包网站的介绍来写一个：
 
 {% highlight r %}
 knit_hooks$set(addfile = function(before, options, envir) {
@@ -110,3 +116,16 @@ chartSeries(GS, theme='white')
 本文所使用的knitr功能还不是很多，未来还有很多要探讨，但说回来还是要服务于需要，当需求比较稳定的时候，只要摸索出一套常用的设置就可以了，也没必要研究得太细，一些地方也可以hack一下，没必要搞得太清楚，目的就是自动化输出我们想要的结果就完事大吉。
 
 此外，在研究的过程中，我发现语法高亮是个挺好玩的事情，有机会再深入研究下，就当纯娱乐吧。
+
+[firstblog]: {% post_url 2014-04-07-First-Blog %}
+[npp]: http://www.notepad-plus-plus.org/
+[npptor]: http://sourceforge.net/projects/npptor/
+[tinnr]: http://www.sciviews.org/Tinn-R/
+[rstudio]: http://www.rstudio.com/
+[shiny]: http://www.rstudio.com/shiny/
+[rmd]: http://rmarkdown.rstudio.com/
+[knitr]: http://yihui.name/knitr/
+[yihui]: http://yihui.name
+[liquid]: http://docs.shopify.com/themes/liquid-basics
+[pyg]: http://pygments.org/
+[style]: https://github.com/richleland/pygments-css
