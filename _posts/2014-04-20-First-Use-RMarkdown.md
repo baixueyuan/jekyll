@@ -30,15 +30,11 @@ RMarkdown其实就是在Markdown当中加入R代码，然后用knit或render输�
 
 
 {% highlight r %}
-{% raw %}
 ```{r}
-{% endraw %}
 a <- 20
 b <- 30
 paste("The result is ", a * b, ".", sep = "")
-{% raw %}
 ```
-{% endraw %}
 {% endhighlight %}
 
 
