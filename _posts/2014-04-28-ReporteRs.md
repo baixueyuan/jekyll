@@ -3,7 +3,7 @@ layout: post
 title: R包：ReporteRs——由R输出Word和PowerPoint文档
 ---
 
-R和微软的Office系列一直契合的还可以，这主要是指R与Excel之间的数据读取和文件格式转换等，其实这一点从最初的`[RODBC][RODBC]`包开始就具有这个功能；后来发展到`[xlsx][xlsx]`包和`[XLConnect][XLConnect]`。这些包与微软系列的**交流**主要是依靠[Apache POI][Apache POI]，这个项目的首页有一段*Mission Statement*，表述如下：
+R和微软的Office系列一直契合得还可以，这主要是指R与Excel之间的数据读取和文件格式转换等，其实这一点从最初的[`RODBC`][RODBC]包开始就具有这个功能；后来发展到`[xlsx][xlsx]`包和`[XLConnect][XLConnect]`。这些包与微软系列的**交流**主要是依靠[Apache POI][Apache POI]，这个项目的首页有一段*Mission Statement*，表述如下：
 
 > The Apache POI Project's mission is to create and maintain Java APIs for manipulating various file formats based upon the Office Open XML standards (OOXML) and Microsoft's OLE 2 Compound Document format (OLE2). In short, you can read and write MS Excel files using Java. In addition, you can read and write MS Word and MS PowerPoint files using Java. 
 
@@ -54,7 +54,7 @@ devtools::install_github('ReporteRs', 'davidgohel')
 
 关于逐段添加这一环节，可以大致按照下面的思路来做：
 
-{% highlight r %}
+{% highlight r linenos %}
 df <- data.frame(text=text, style='normal', stringsAsFactors)
 df$style <- myfunc(df$text)
 for (i in 1:nrow(df)) {
