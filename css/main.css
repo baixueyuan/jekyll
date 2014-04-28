@@ -159,8 +159,8 @@ a:visited { color: #dd0000; text-decoration: none; }
   margin-left: 1.35em;
 }
 
-.post p code {
-  font-size: 12px;
+.post code {
+  /* font-size: 12px; */
   font-family: Andale Mono, monospace;
   border: 1px solid #ddd;
   background-color: #f8f8f8;
