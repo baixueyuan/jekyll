@@ -10,13 +10,14 @@ output: html_document
 
 在[前文][previous]中已经对ReporteRs的一些问题做了探讨，但是作为一个刚刚开始不久的项目，仍会有一些问题，其实其Github上的[issues][issues]也不算多。
 
-我在使用中发现一个问题，其实作者也曾[提到过][name]:
+我在使用中发现一个问题，作者也曾[提到过][name]:
 
 > Do not use styles names that contains special character. In France for example, the default style named "Legend" becomes "L?gende" and is returned as "Lgende" by the styles R function. The workaround is to create a new style based on "L?gende" and to name it "Legende". It will be then a valid name to use with ReporteRs
 
 但在实际工作中，这个问题不太可能被彻底回避，比如我们用一个中文的Word文档作为template，再使用`styles`函数的话得到的样式名称如下：
 
 ```{r setup, echo=FALSE}
+options(width=80)
 docx.file <- 'D:/Dropbox/R/Projects/Blogpost/template1.docx'
 output <- 'D:/Dropbox/R/Projects/Blogpost/test1.docx'
 ```
@@ -31,18 +32,18 @@ styles(doc)
 
 ### 是否可以修改Word内建样式名称？
 
-如果了解Word的使用并且经常使用其样式功能的人一定会会修改内建样式或经常创建自己需要的样式名称。关于前面提到的问题，这里有两件事要放在一起说一下：
+如果了解Word并且经常使用其样式功能的人一定会经常修改内建样式或创建自己需要的样式。关于前面提到的问题，这里有两件事要放在一起说一下：
 
-- 对于个别应用，可以创建自己的样式来应用，但是Word的内建样式还是有很多重要功能的，并不是创建自己的样式可以完全替代的，所以理论上来说，最好是使用内建样式。
-- 内建样式的名称无法修改，例如将`标题 1`改为`title1`之后，就会看到样式的名称变成了`标题 1,title1`，如下图所示。所以说这样做的结果无济于事，再次读取这个文件并运行`styles`函数，不会有改变，因为应当是始终读取的内建样式名称。
+- 对于个别应用，可以创建自己的样式来使用，但是Word的内建样式还是有很多重要功能的，并不是创建自己的样式可以完全替代的，所以理论上来说，最好是尽量使用内建样式。
+- *内建样式的名称无法修改*，例如将`标题 1`改为`title1`之后，就会看到样式的名称变成了`标题 1,title1`，如下图所示。所以说这样做的结果无济于事，再次读取这个文件并运行`styles`函数，不会有改变，因为应当是始终读取的内建样式名称。
 
 ![样式名称](/jekyll/figure/2014-04-28-Stylename.jpg)
 
-因此，简单来说就是既要尽量使用内建样式，又要无法更改样式名称。
+因此，简单来说就是既要尽量使用内建样式，又无法更改样式名称。
 
 ### 暂时的解决方案
 
-关于这个问题我已经向作者[提出][myissue]，看看作者能否有什么好办法改善一下这个情况，因为我们真的没办法在那里瞎猜。
+关于这个问题我已经向作者[提出][myissue]，看看作者能否有什么好办法改善一下这个情况，因为我们真的没办法在那里瞎猜。如果就确定使用很少数的几个模板还好，如果模板经常换就麻烦了，再说这也算个**缺陷**吧。
 
 其实暂时的解决方案也很简单：
 
@@ -50,12 +51,12 @@ styles(doc)
 2. 新建一些样式用英文命名供自己使用。
 3. **猜**一下这些样式都是什么。
 
-上面提到的对标题进行重新声明，可以参考[项目主页][name]上来做:
+上面提到的对标题进行重新声明，可以参考[项目主页][name]上的方法来做:
 
 ```{r styledeclare, eval=FALSE}
-doc = declareTitlesStyles(doc,
-                          stylenames = c("1", "2", "3", "4", "5",
-                                         "6", "7", "8", "9" ) )
+doc <- declareTitlesStyles(doc,
+       stylenames=c("1", "2", "3", "4", "5",
+                    "6", "7", "8", "9" ) )
 ```
 
 *注意*，还要看一下目前模板中的目录到底到第几层，Word当中最多有9层目录，但是如果`styles`没有显示那么多就会出错，两者一定要匹配才行。
@@ -72,7 +73,7 @@ for (i in 1:length(sty_list)) {
 writeDoc(doc, file=output) # output文件名在不可见的R区块中给出
 ```
 
-得到的结果就是如下图所示了，可以看到`styles`给出的样式实际对应的样式名称，然后根据这种方法做好自己的模板。应当说这样的方法有利于制作模板和自动化报告的程序，*磨刀不误砍柴工*，否则就有点儿费事儿，但愿作者能做些修改。
+得到的结果就是如下图所示了，可以看到`styles`给出的样式实际对应的样式名称，然后根据这种方法做好自己的模板。应当说这样的方法有利于制作很常用的模板和自动化报告的程序，*磨刀不误砍柴工*，否则就有点儿费事儿，但愿作者能做些修改。
 
 ![样式名称](/jekyll/figure/2014-04-28-Style-Hack.jpg)
 
