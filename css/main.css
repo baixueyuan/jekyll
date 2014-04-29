@@ -152,7 +152,8 @@ a:visited { color: #dd0000; text-decoration: none; }
 .post pre {
   border: 1px solid #ddd;
   background-color: #f8f8f8;
-  padding: .7em .4em;
+  padding: .4em .4em;
+  border-left: 8px solid red;
 }
 
 .post ul, .post ol {
