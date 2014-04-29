@@ -16,22 +16,17 @@ output: html_document
 
 但在实际工作中，这个问题不太可能被彻底回避，比如我们用一个中文的Word文档作为template，再使用`styles`函数的话得到的样式名称如下：
 
+```{r setup, include=FALSE}
+library(ReporteRs)
+options(width=70)
+docx.file <- 'D:/Dropbox/R/Projects/Blogpost/template1.docx'
+output <- 'D:/Dropbox/R/Projects/Blogpost/test1.docx'
+```
 
-
-
-
-{% highlight r %}
-doc <- docx(template = docx.file)  # 文件名在不可见的R区块中给出
+```{r running}
+doc <- docx(template=docx.file) # 文件名在不可见的R区块中给出
 styles(doc)
-{% endhighlight %}
-
-
-
-{% highlight text %}
-##  [1] "a0" "1"  "20" "3"  "4"  "5"  "a4" "a5" "a6" "a7" "a8" "a9" "a" 
-## [14] "2"  "aa" "ac" "ad" "ae" "10"
-{% endhighlight %}
-
+```
 
 谁能告诉我这些都是**神马**样式呢？我们还不如前面提到的法语中的情况，可以猜出来哪个是哪个，差别不大，但是显然中文这个完全不行。
 
@@ -58,36 +53,25 @@ styles(doc)
 
 上面提到的对标题进行重新声明，可以参考[项目主页][name]上的方法来做:
 
-
-{% highlight r %}
+```{r styledeclare, tidy=FALSE}
 doc <- declareTitlesStyles(doc,
        stylenames=c("1", "2", "3", "4", "5",
                     "6", "7", "8", "9" ) )
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error: Some of the stylenames are not in available styles (run styles
-## on your object to list available styles.
-{% endhighlight %}
-
+```
 
 *注意*，一定要看一下目前模板中的目录到底到第几层，Word当中最多有9层目录，但是如果`styles`没有显示那么多就会出错，上面代码中给出的信息正是这个意思，两者一定要匹配才行。
 
 关于上面提到的第3点，实在是一种**很不爽**的办法，或者说是“没办法的办法”，算是个小Hack吧：
 
-
-{% highlight r %}
-options(`ReporteRs-default-font` = "Arial")
+```{r hack}
+options('ReporteRs-default-font'='Arial')
 sty_list <- styles(doc)
 par_list <- paste("这一段的样式名称是：", sty_list)
 for (i in 1:length(sty_list)) {
-    doc <- addParagraph(doc, value = par_list[i], stylename = sty_list[i])
+  doc <- addParagraph(doc, value=par_list[i], stylename=sty_list[i])
 }
-writeDoc(doc, file = output)  # output文件名在不可见的R区块中给出
-{% endhighlight %}
-
+writeDoc(doc, file=output) # output文件名在不可见的R区块中给出
+```
 
 得到的结果就是如下图所示了，可以看到`styles`给出的样式实际对应的样式名称，然后根据这种方法做好自己的模板。应当说这样的方法有利于制作很常用的模板和自动化报告的程序，*磨刀不误砍柴工*，否则就有点儿费事儿，但愿作者能做些修改。
 
@@ -96,3 +80,4 @@ writeDoc(doc, file = output)  # output文件名在不可见的R区块中给出
 [previous]: {% post_url 2014-04-28-ReporteRs %}
 [issues]: https://github.com/davidgohel/ReporteRs/issues?state=open
 [name]: http://davidgohel.github.io/ReporteRs/word.html
+[myissue]: https://github.com/davidgohel/ReporteRs/issues/8
