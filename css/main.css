@@ -164,12 +164,13 @@ a:visited { color: #dd0000; text-decoration: none; }
   font-family: Andale Mono, monospace;
   border: 1px solid #ddd;
   background-color: #f8f8f8;
-  padding: 0 .2em;
+  padding: 0 2px;
   margin: 0 2px;
 }
 
 .post pre code {
   border: none;
+  padding: 0;
 }
 
 /* terminal */
