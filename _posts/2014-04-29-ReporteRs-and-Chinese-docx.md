@@ -17,15 +17,6 @@ output: html_document
 但在实际工作中，这个问题不太可能被彻底回避，比如我们用一个中文的Word文档作为template，再使用`styles`函数的话得到的样式名称如下：
 
 
-
-
-
-{% highlight r %}
-library(ReporteRs)
-{% endhighlight %}
-
-
-
 {% highlight text %}
 ## Loading required package: ReporteRsjars
 {% endhighlight %}
@@ -40,8 +31,8 @@ styles(doc)
 
 
 {% highlight text %}
-##  [1] "a0" "1"  "20" "3"  "4"  "5"  "a4" "a5" "a6" "a7" "a8" "a9" "a"  "2"  "aa"
-## [16] "ac" "ad" "ae" "10"
+##  [1] "a0" "1"  "20" "3"  "4"  "5"  "a4" "a5" "a6" "a7" "a8" "a9" "a" 
+## [14] "2"  "aa" "ac" "ad" "ae" "10"
 {% endhighlight %}
 
 
@@ -52,7 +43,7 @@ styles(doc)
 如果了解Word并且经常使用其样式功能的人一定会经常修改内建样式或创建自己需要的样式。关于前面提到的问题，这里有两件事要放在一起说一下：
 
 - 对于个别应用，可以创建自己的样式来使用，但是Word的内建样式还是有很多重要功能的，并不是创建自己的样式可以完全替代的，所以理论上来说，最好是尽量使用内建样式。
-- *内建样式的名称无法修改*，例如将`标题 1`改为`title1`之后，就会看到样式的名称变成了`标题 1,title1`，如下图所示。所以说这样做的结果无济于事，再次读取这个文件并运行`styles`函数，不会有改变，因为应当是始终读取的内建样式名称。
+- *内建样式的名称无法修改*，例如将`标题1`改为`title1`之后，就会看到样式的名称变成了`标题1,title1`，如下图所示。所以说这样做的结果无济于事，再次读取这个文件并运行`styles`函数，不会有改变，因为应当是始终读取的内建样式名称。
 
 ![样式名称](/jekyll/figure/2014-04-28-Stylename.jpg)
 
@@ -72,8 +63,15 @@ styles(doc)
 
 
 {% highlight r %}
-doc <- declareTitlesStyles(doc, stylenames = c("1", "2", "3", "4", "5", "6", "7", 
-    "8", "9"))
+doc <- declareTitlesStyles(doc, stylenames = c("1", "2", "3", "4", "5", 
+    "6", "7", "8", "9"))
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Error: Some of the stylenames are not in available styles (run styles
+## on your object to list available styles.
 {% endhighlight %}
 
 

@@ -53,7 +53,7 @@ styles(doc)
 
 上面提到的对标题进行重新声明，可以参考[项目主页][name]上的方法来做:
 
-```{r styledeclare, eval=FALSE}
+```{r styledeclare}
 doc <- declareTitlesStyles(doc,
        stylenames=c("1", "2", "3", "4", "5",
                     "6", "7", "8", "9" ) )
