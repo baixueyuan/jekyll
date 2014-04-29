@@ -18,13 +18,17 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(ReporteRs)
-options(width=70)
+options(width=60)
 docx.file <- 'D:/Dropbox/R/Projects/Blogpost/template1.docx'
 output <- 'D:/Dropbox/R/Projects/Blogpost/test1.docx'
+if (Sys.info()['sysname']=='Darwin') {
+docx.file <- '/Users/baixueyuan/Dropbox/R/Projects/Blogpost/template1.docx'
+output <- '/Users/baixueyuan/Dropbox/R/Projects/Blogpost/test1.docx'
+}
 ```
 
 ```{r running}
-doc <- docx(template=docx.file) # 文件名在不可见的R区块中给出
+doc <- docx(template=docx.file) # 文件名在不可见R区块中给出
 styles(doc)
 ```
 
@@ -63,14 +67,15 @@ doc <- declareTitlesStyles(doc,
 
 关于上面提到的第3点，实在是一种**很不爽**的办法，或者说是“没办法的办法”，算是个小Hack吧：
 
-```{r hack}
+```{r hack, tidy=FALSE}
 options('ReporteRs-default-font'='Arial')
 sty_list <- styles(doc)
 par_list <- paste("这一段的样式名称是：", sty_list)
 for (i in 1:length(sty_list)) {
-  doc <- addParagraph(doc, value=par_list[i], stylename=sty_list[i])
+  doc <- addParagraph(doc, value=par_list[i],
+                      stylename=sty_list[i])
 }
-writeDoc(doc, file=output) # output文件名在不可见的R区块中给出
+writeDoc(doc, file=output) # output文件名在不可见区块中给出
 ```
 
 得到的结果就是如下图所示了，可以看到`styles`给出的样式实际对应的样式名称，然后根据这种方法做好自己的模板。应当说这样的方法有利于制作很常用的模板和自动化报告的程序，*磨刀不误砍柴工*，否则就有点儿费事儿，但愿作者能做些修改。

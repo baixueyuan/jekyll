@@ -21,15 +21,15 @@ output: html_document
 
 
 {% highlight r %}
-doc <- docx(template = docx.file)  # 文件名在不可见的R区块中给出
+doc <- docx(template = docx.file)  # 文件名在不可见R区块中给出
 styles(doc)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##  [1] "a0" "1"  "20" "3"  "4"  "5"  "a4" "a5" "a6" "a7" "a8" "a9" "a" 
-## [14] "2"  "aa" "ac" "ad" "ae" "10"
+##  [1] "a0" "1"  "20" "3"  "4"  "5"  "a4" "a5" "a6" "a7" "a8"
+## [12] "a9" "a"  "2"  "aa" "ac" "ad" "ae" "10"
 {% endhighlight %}
 
 
@@ -68,8 +68,8 @@ doc <- declareTitlesStyles(doc,
 
 
 {% highlight text %}
-## Error: Some of the stylenames are not in available styles (run styles
-## on your object to list available styles.
+## Error: Some of the stylenames are not in available styles
+## (run styles on your object to list available styles.
 {% endhighlight %}
 
 
@@ -79,13 +79,14 @@ doc <- declareTitlesStyles(doc,
 
 
 {% highlight r %}
-options(`ReporteRs-default-font` = "Arial")
+options('ReporteRs-default-font'='Arial')
 sty_list <- styles(doc)
 par_list <- paste("这一段的样式名称是：", sty_list)
 for (i in 1:length(sty_list)) {
-    doc <- addParagraph(doc, value = par_list[i], stylename = sty_list[i])
+  doc <- addParagraph(doc, value=par_list[i],
+                      stylename=sty_list[i])
 }
-writeDoc(doc, file = output)  # output文件名在不可见的R区块中给出
+writeDoc(doc, file=output) # output文件名在不可见区块中给出
 {% endhighlight %}
 
 
@@ -96,3 +97,4 @@ writeDoc(doc, file = output)  # output文件名在不可见的R区块中给出
 [previous]: {% post_url 2014-04-28-ReporteRs %}
 [issues]: https://github.com/davidgohel/ReporteRs/issues?state=open
 [name]: http://davidgohel.github.io/ReporteRs/word.html
+[myissue]: https://github.com/davidgohel/ReporteRs/issues/8
