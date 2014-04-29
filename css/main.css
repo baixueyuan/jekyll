@@ -166,7 +166,6 @@ a:visited { color: #dd0000; text-decoration: none; }
   background-color: #f8f8f8;
   padding: 0 .2em;
   margin: 0 2px;
-  white-space: nowrap;
 }
 
 .post pre code {
