@@ -5,8 +5,8 @@
 # if (length(grep('GitHub$', getwd()))) cat('Reached GitHub Folder!')
 
 # 将Rmd文件knit为md文件，需要输入的是Rmd文件名和日期date
-inputfile <- 'First-Use-RMarkdown.Rmd'
-date <- '2014-04-14'
+inputfile <- 'ReporteRs-and-Chinese-docx.Rmd'
+date <- '2014-04-29'
 
 # inputdir <- 'jekyll/_rmd/'
 # outputdir <- 'jekyll/_posts/'
@@ -20,4 +20,4 @@ output <- gsub('.Rmd', '.md', output)
 # knitting，首先运行render_jekyll以保证knit会使用jekyll的Liquid引擎
 library(knitr)
 render_jekyll()
-knit(inputfile, output)
+knit(inputfile, output, encoding = 'utf-8')
