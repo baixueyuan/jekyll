@@ -69,11 +69,11 @@ $$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\
 在公式 [eq: cfbasic] 中已经给出了转换因子的基本公式，仔细观察该公式就可以发现，虽然该公式可以直接进行计算，但是由于其包含了一个等比序列，完全可以用等比序列求和的方式进行简化，从而得到易于计算的简化版公式。
 计算过程如下：
 
-$$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td} \notag \\$$
-$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{\frac{c}{f}}{\left( 1 + \frac{r}{f} \right)^1} + \ldots + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{n - 1}} + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) \notag \\$$
-$$& \quad - \frac{c}{f} \times \frac{td - d}{td} \notag \\$$
-$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} \left( 1 - \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) - \frac{c}{f} \times \frac{td - d}{td} \notag \\$$
-$$CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) - \frac{c}{f} \times \left( 1 - \frac{d}{td} \right) \label{eq: cfsimple}\end{aligned}$$
+$$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td} $$
+$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{\frac{c}{f}}{\left( 1 + \frac{r}{f} \right)^1} + \ldots + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{n - 1}} + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right)$$
+$$ \quad - \frac{c}{f} \times \frac{td - d}{td}$$
+$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} \left( 1 - \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) - \frac{c}{f} \times \frac{td - d}{td}$$
+$$CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) - \frac{c}{f} \times \left( 1 - \frac{d}{td} \right) \label{eq: cfsimple}$$
 
 经过推导得到的公式 [eq: cfsimple] 已经不再包含不确定的项，只要将公式中的参数确定，即可得到转换因子 $CF$，而公式中的参数都可以很容易知道确定的值。此外，我们再看一下中金所正式公布[^4]的转换因子计算公式：
 
