@@ -40,7 +40,7 @@ $$\text{发票价格} = \text{交割结算价} \times \text{转换因子} + \tex
 
 具体公式如下：
 
-$$ \label{fbasic} CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td}$$
+$$\begin{equation} \label{fbasic} CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td}\end{equation}$$
 
 其中：
 
