@@ -71,7 +71,7 @@ $$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\
 
 $$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td}$$
 
-$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{\frac{c}{f}}{\left( 1 + \frac{r}{f} \right)^1} + \ldots + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{n - 1}} + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) \quad - \frac{c}{f} \times \frac{td - d}{td}$$
+$$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{\frac{c}{f}}{\left( 1 + \frac{r}{f} \right)^{1}} + \ldots + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{n - 1}} + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) \quad - \frac{c}{f} \times \frac{td - d}{td}$$
 
 $$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} \left( 1 - \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) - \frac{c}{f} \times \frac{td - d}{td}$$
 
