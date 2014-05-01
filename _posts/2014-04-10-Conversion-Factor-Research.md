@@ -69,7 +69,7 @@ $$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\
 在公式 [eq: cfbasic] 中已经给出了转换因子的基本公式，仔细观察该公式就可以发现，虽然该公式可以直接进行计算，但是由于其包含了一个等比序列，完全可以用等比序列求和的方式进行简化，从而得到易于计算的简化版公式。
 计算过程如下：
 
-$$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td} $$
+$$CF = \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + 1}} + \ldots + \frac{\frac{c}{f} + 1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td} + n - 1}} - \frac{c}{f} \times \frac{td - d}{td}$$
 
 $$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{\frac{c}{f}}{\left( 1 + \frac{r}{f} \right)^1} + \ldots + \frac{\frac{c}{f}}{\left(1 + \frac{r}{f}\right)^{n - 1}} + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) \quad - \frac{c}{f} \times \frac{td - d}{td}$$
 
