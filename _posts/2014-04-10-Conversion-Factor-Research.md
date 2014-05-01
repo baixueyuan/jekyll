@@ -75,11 +75,11 @@ $$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \
 
 $$= \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} \left( 1 - \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) + \frac{1}{\left(1 + \frac{r}{f}\right)^{n - 1}} \right) - \frac{c}{f} \times \frac{td - d}{td}$$
 
-$$\begin{eqation} \label{cfsimple} CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) - \frac{c}{f} \times \left( 1 - \frac{d}{td} \right) \end{equation}$$
+$$\begin{equation} \label{cfsimple} CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{d}{td}}} \left( \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right) - \frac{c}{f} \times \left( 1 - \frac{d}{td} \right) \end{equation}$$
 
 经过推导得到的公式$\ref{cfsimple}$ 已经不再包含不确定的项，只要将公式中的参数确定，即可得到转换因子 $CF$，而公式中的参数都可以很容易知道确定的值。此外，我们再看一下中金所正式公布[^4]的转换因子计算公式：
 
-$$\begin{eqation} CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{xf}{12}}} \left[ \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right] - \frac{c}{f} \times \left( 1 - \frac{xf}{12} \right) \label{cfcfe} \end{equation}$$
+$$\begin{equation} CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{xf}{12}}} \left[ \frac{c}{f} + \frac{c}{r} + \left( 1 - \frac{c}{r} \right) \times \frac{1}{\left( 1 + \frac{r}{f} \right)^{n - 1}} \right] - \frac{c}{f} \times \left( 1 - \frac{xf}{12} \right) \label{cfcfe} \end{equation}$$
 
 经过推导得到的公式$\ref{cfsimple}$ 与中金所正式发布的公式$\ref{cfcfe}$ 从外形来看极其相似，可以说是基本一致的，事实上中金所公布的公式只是个结果公式，即任何人都可以按照这个公式来计算得到转换因子，但公式本身的形式完全无法解释，因为它是一个推导结果。两个公式的唯一不同之处就在于 $d / td$ 和 $xf / 12$ 这一处，也就是前面提到的，中金所将当前付息周期剩余期限精确到月，而本文推导的公式精确到天。其中，$x$ 为交割月到下一付息月的月份数，而 $f$ 同样表示一年中的付息频率，因此分数 $xf / 12$ 就可以表示贴现日相对于下一个付息日的精确到月的剩余期限。再次强调的是，中金所的公式仅供计算来用，无法直观去解释。
 
