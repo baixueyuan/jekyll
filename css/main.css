@@ -223,9 +223,12 @@ table {
   font-family: "Hiragino Sans GB","Microsoft YaHei",Tahoma,Verdana,sans-serif;
   border-collapse: collapse;
   font-size: 11px;
+  height: 14px;
+  line-height: 14px;
 }
 
 table th {
+  font-size: 12px;
   font-weight: bold;
   background-color: #f8f8f8;
 }
