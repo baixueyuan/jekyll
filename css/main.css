@@ -221,6 +221,8 @@ blockquote>:last-child {
 
 table {
   font-family: "Hiragino Sans GB","Microsoft YaHei",Tahoma,Verdana,sans-serif;
+  border-collapse: collapse;
+  font-size: 11px;
 }
 
 table th {
