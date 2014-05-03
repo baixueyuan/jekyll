@@ -230,7 +230,8 @@ table {
 table th {
   font-size: 12px;
   font-weight: bold;
-  background-color: #f8f8f8;
+  color: white;
+  background-color: #000000;
 }
 
 table th, table td {
