@@ -253,7 +253,7 @@ table th {
   text-align: center;
 }
 
-table th.first, table td.first {
+table th.first-child, table td.first-child {
   text-align: left;
 }
 
