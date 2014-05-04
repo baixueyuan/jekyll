@@ -217,12 +217,17 @@ blockquote>:last-child {
   margin-bottom: 0px;
 }
 
+/*****************************************************************************/
+/*
 /* TABLES
+/*
 =============================================================================*/
 
 table {
   font-family: "Hiragino Sans GB","Microsoft YaHei",Tahoma,Verdana,sans-serif;
   border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 11px;
   height: 14px;
   line-height: 14px;
@@ -237,7 +242,19 @@ table th {
 
 table th, table td {
   border: 1px solid #ccc;
-  padding: 6px 13px;
+  padding: 3px 10px;
+}
+
+table td {
+  text-align: right;
+}
+
+table th {
+  text-align: center;
+}
+
+table th.first, table td.first {
+  text-align: left;
 }
 
 table tr {
