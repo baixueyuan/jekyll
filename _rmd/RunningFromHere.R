@@ -20,8 +20,9 @@ input <- '2014-05-08-ReporteRs-Update.Rmd'
 output <- paste('../_posts/', input, sep='')
 output <- gsub('.Rmd', '.md', output)
 
-# knitting，首先运行render_jekyll以保证knit会使用jekyll的Liquid引擎
+# knitting，首先运行render_jekyll以保证knit会
+# 使用jekyll的Liquid引擎
 library(knitr)
-opts_knit$set(width=60)
+opts_knit$set(width=60) # 设定宽度，防止过宽超出代码区块
 render_jekyll()
 knit(input, output, encoding = 'utf-8')

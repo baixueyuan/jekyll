@@ -2,8 +2,7 @@
 layout: post
 title: ReporteRs与中文docx模板
 tags: [R, ReporteRs, Word, 问题, 办公自动化]
-date: "Tuesday, April 29, 2014"
-output: html_document
+
 ---
 
 ### 问题：中文docx文件中的样式无法识别
