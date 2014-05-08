@@ -22,5 +22,6 @@ output <- gsub('.Rmd', '.md', output)
 
 # knitting，首先运行render_jekyll以保证knit会使用jekyll的Liquid引擎
 library(knitr)
+opts_knit$set(width=60)
 render_jekyll()
 knit(input, output, encoding = 'utf-8')

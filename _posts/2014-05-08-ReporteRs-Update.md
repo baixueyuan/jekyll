@@ -1,7 +1,8 @@
 ---
 layout: post
-title: ReporteRs包更新并改善对中文docx文件支持
+title: ReporteRs包更新至0.5.3版本并改善对中文docx文件支持
 tags: [R, Github, ReporteRs, Word]
+
 ---
 
 在前一篇[文章][previous]中，已经就ReporteRs包对于中文支持存在的问题进行了讨论，并给出了一些简单地处理办法。我也就这个问题向作者提出了一个[Issue][myissue]，目前这个Issue已经关闭，问题已经基本算是阶段性解决。
@@ -24,14 +25,16 @@ styles(doc)
 
 
 {% highlight text %}
-##         Normal      heading 1      heading 2      heading 3      heading 4 
-##            "a"            "1"            "2"            "3"            "4" 
-##      heading 5      heading 6      heading 7      heading 8      heading 9 
-##            "5"            "6"            "7"            "8"            "9" 
-##         header         footer     No Spacing          Title       Subtitle 
-##           "a3"           "a4"           "a5"           "a6"           "a7" 
-##          Quote  Intense Quote List Paragraph 
-##           "ac"           "ad"          "af1"
+##         Normal      heading 1      heading 2      heading 3 
+##            "a"            "1"            "2"            "3" 
+##      heading 4      heading 5      heading 6      heading 7 
+##            "4"            "5"            "6"            "7" 
+##      heading 8      heading 9         header         footer 
+##            "8"            "9"           "a3"           "a4" 
+##     No Spacing          Title       Subtitle          Quote 
+##           "a5"           "a6"           "a7"           "ac" 
+##  Intense Quote List Paragraph 
+##           "ad"          "af1"
 {% endhighlight %}
 
 

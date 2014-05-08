@@ -2,6 +2,7 @@
 layout: post
 title: ReporteRs包更新至0.5.3版本并改善对中文docx文件支持
 tags: [R, Github, ReporteRs, Word]
+
 ---
 
 在前一篇[文章][previous]中，已经就ReporteRs包对于中文支持存在的问题进行了讨论，并给出了一些简单地处理办法。我也就这个问题向作者提出了一个[Issue][myissue]，目前这个Issue已经关闭，问题已经基本算是阶段性解决。
@@ -18,11 +19,11 @@ library(ReporteRs)
 doc <- docx(template='/Users/baixueyuan/Dropbox/R/Projects/Blogpost/templateInSimplifiedChinese.docx')
 ```
 
-```{r, cache=TRUE}
+```{r, cache=TRUE, }
 styles(doc)
 ```
 
 尽管目前仍然无法完全显示和使用中文样式，但还是方便了很多。
 
-[previous]: {% porst_url 2014-04-29-ReporteRs-and-Chinese-docx %}
+[previous]: {% post_url 2014-04-29-ReporteRs-and-Chinese-docx %}
 [myissue]: https://github.com/davidgohel/ReporteRs/issues/8
