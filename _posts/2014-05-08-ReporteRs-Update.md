@@ -37,5 +37,5 @@ styles(doc)
 
 尽管目前仍然无法完全显示和使用中文样式，但还是方便了很多。
 
-[previous]: {% porst_url 2014-04-29-ReporteRs-and-Chinese-docx %}
+[previous]: {% post_url 2014-04-29-ReporteRs-and-Chinese-docx %}
 [myissue]: https://github.com/davidgohel/ReporteRs/issues/8
