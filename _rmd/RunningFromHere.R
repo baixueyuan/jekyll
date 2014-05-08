@@ -16,8 +16,8 @@
 
 
 # 目前使用以下代码knit ####
-input <- '2014-04-29-ReporteRs-and-Chinese-docx.Rmd'
-output <- paste('../_posts/', inputfile, sep='')
+input <- '2014-05-08-ReporteRs-Update.Rmd'
+output <- paste('../_posts/', input, sep='')
 output <- gsub('.Rmd', '.md', output)
 
 # knitting，首先运行render_jekyll以保证knit会使用jekyll的Liquid引擎
