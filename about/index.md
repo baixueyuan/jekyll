@@ -1,8 +1,6 @@
 ---
-layout: post
+layout: default
 title: About
-tags: [about]
-
 ---
 
 我是谁？
@@ -10,3 +8,5 @@ tags: [about]
 我是干什么的？
 
 我还想干什么？
+
+这是一个测试文件！
