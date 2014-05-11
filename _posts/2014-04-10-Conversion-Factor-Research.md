@@ -146,17 +146,18 @@ $$\begin{equation} CF = \frac{1}{\left(1 + \frac{r}{f}\right)^{\frac{xf}{12}}} \
 
 |合约代码 | 均值 | $t-\text{统计量}$ | $p-\text{值}$|
 |--------|-----|------------------|-------------|
-|TF1312.CFE | 1.54 &times; 10<sup>-4</sup> | 5.802 | 3.57 &times; 10<sup>-6</sup>|
-|TF1403.CFE | 1.75 &times; 10<sup>-4</sup> | 4.473 | 1.73 &times; 10<sup>-4</sup>|
-|TF1406.CFE | 1.67 &times; 10<sup>-4</sup> | 7.230 | 2.33 &times; 10<sup>-7</sup>|
-|TF1409.CFE | 1.81 &times; 10<sup>-4</sup> | 6.204 | 1.46 &times; 10<sup>-6</sup>|
-|TF1412.CFE | 1.86 &times; 10<sup>-4</sup> | 6.042 | 1.89 &times; 10<sup>-6</sup>|
+|TF1312.CFE | 1.54 &times; 10<sup>&minus;4</sup> | 5.802 | 3.57 &times; 10<sup>&minus;6</sup>|
+|TF1403.CFE | 1.75 &times; 10<sup>&minus;4</sup> | 4.473 | 1.73 &times; 10<sup>&minus;4</sup>|
+|TF1406.CFE | 1.67 &times; 10<sup>&minus;4</sup> | 7.230 | 2.33 &times; 10<sup>&minus;7</sup>|
+|TF1409.CFE | 1.81 &times; 10<sup>&minus;4</sup> | 6.204 | 1.46 &times; 10<sup>&minus;6</sup>|
+|TF1412.CFE | 1.86 &times; 10<sup>&minus;4</sup> | 6.042 | 1.89 &times; 10<sup>&minus;6</sup>|
 
 <!--|TF1312.CFE | $1.54 \times 10^{-4}$ | 5.802 | $3.57 \times 10^{-6}$|-->
 <!--|TF1403.CFE | $1.75 \times 10^{-4}$ | 4.473 | $1.73 \times 10^{-4}$|-->
 <!--|TF1406.CFE | $1.67 \times 10^{-4}$ | 7.230 | $2.33 \times 10^{-7}$|-->
 <!--|TF1409.CFE | $1.81 \times 10^{-4}$ | 6.204 | $1.46 \times 10^{-6}$|-->
 <!--|TF1412.CFE | $1.86 \times 10^{-4}$ | 6.042 | $1.89 \times 10^{-6}$|-->
+
 <a name="precision"></a>
 #### 2.3 关于精确问题的小议
 
