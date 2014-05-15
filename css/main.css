@@ -288,8 +288,11 @@ img {
   margin-right: 3px;
 }
 
-ul #listing li {
-  font-size: 12px;
+ul .listing li {
+  font-size: 16px;
+}
+
+ul.listing {
   list-style-type: none;
 }
 
@@ -297,7 +300,7 @@ ul time {
   color: gray;
 }
 
-ul #listing .listing-seperator {
+ul .listing .listing-seperator {
   font-weight: bold;
   margin-top: 10px;
 }
