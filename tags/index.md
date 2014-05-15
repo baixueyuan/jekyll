@@ -6,8 +6,9 @@ title: Tags
 
 <h1>{{ page.title }}</h1>
 
+<div id='tag_cloud'>
 {% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}{{ tag[1].size }}</a>
 {% endfor %}
 </div>
 
@@ -23,6 +24,7 @@ title: Tags
 {% endfor %}
 </ul>
 
+<!--
 <script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
 <script language="javascript">
 $.fn.tagcloud.defaults = {
@@ -34,3 +36,4 @@ $(function () {
     $('#tag_cloud a').tagcloud();
 });
 </script>
+-->
