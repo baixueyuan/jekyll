@@ -284,12 +284,8 @@ img {
 /*
 /*****************************************************************************/
 #tag_cloud a {
-  font-size: 12px;
+  font-size: 16px;
   margin-right: 3px;
-}
-
-ul .listing li {
-  font-size: 26px;
 }
 
 ul.listing {
@@ -301,7 +297,7 @@ ul time {
   margin-right: 20px;
 }
 
-ul .listing .listing-seperator {
+ul .listing li.listing-seperator {
   display: block;
   font-weight: 900;
   margin-top: 20px;
