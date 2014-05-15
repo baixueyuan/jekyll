@@ -292,13 +292,12 @@ ul.listing {
   list-style-type: none;
 }
 
-ul time {
+ul.listing time {
   color: gray;
   margin-right: 20px;
 }
 
-ul .listing li.listing-seperator {
-  display: block;
+ul.listing li.listing-seperator {
   font-weight: 900;
   margin-top: 20px;
 }
