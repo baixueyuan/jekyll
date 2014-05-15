@@ -289,7 +289,7 @@ img {
 }
 
 ul .listing li {
-  font-size: 16px;
+  font-size: 26px;
 }
 
 ul.listing {
@@ -298,10 +298,11 @@ ul.listing {
 
 ul time {
   color: gray;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
 ul .listing .listing-seperator {
+  display: block;
   font-weight: 900;
   margin-top: 20px;
 }
