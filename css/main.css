@@ -283,16 +283,21 @@ img {
 /* Tags
 /*
 /*****************************************************************************/
-#id_cloud a {
+#tag_cloud a {
   font-size: 12px;
   margin-right: 3px;
 }
 
-ul#listing {
+ul #listing li {
   font-size: 12px;
   list-style-type: none;
 }
 
-#listing .listing-seperator {
+ul time {
+  color: gray;
+}
+
+ul #listing .listing-seperator {
   font-weight: bold;
+  margin-top: 10px;
 }
