@@ -8,11 +8,10 @@ title: Tags
 
 <div id='tag_cloud'>
 {% for tag in site.tags %}
-<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}</a>
+<a href="#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0] }}&nbsp;({{ tag[1].size }})</a>
 {% endfor %}
 </div>
 
-<br />
 <br />
 
 <ul class="listing">
