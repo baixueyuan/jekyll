@@ -6,4 +6,4 @@ rdiscount:
     - footnotes
     - smart
 baseurl: /jekyll
-highlighter: pygments
+#highlighter: pygments
