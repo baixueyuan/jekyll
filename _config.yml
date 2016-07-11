@@ -1,9 +1,9 @@
 name: 林海雪原
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
+#markdown: rdiscount
+#rdiscount:
+#  extensions:
+#    - autolink
+#    - footnotes
+#    - smart
 baseurl: /jekyll
 #highlighter: pygments
