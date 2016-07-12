@@ -7,7 +7,3 @@ name: 林海雪原
 #    - smart
 baseurl: /jekyll
 #highlighter: pygments
-
-gems: [jekyll-mermaid]
-mermaid:
-  src: 'https://cdn.rawgit.com/knsv/mermaid/0.5.1/dist/mermaid.js'
