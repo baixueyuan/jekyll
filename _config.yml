@@ -5,5 +5,5 @@ name: 林海雪原
 #    - autolink
 #    - footnotes
 #    - smart
-#baseurl: /jekyll
+baseurl: /jekyll
 #highlighter: pygments
