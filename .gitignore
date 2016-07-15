@@ -2,3 +2,4 @@ _site
 *.swap
 .Rproj.user
 Gemfile*
+jekyll
