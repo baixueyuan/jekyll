@@ -4,6 +4,8 @@ title: 测试mermaid
 tags: [测试]
 ---
 
+{% include mermaid %}
+
 本文用来进行测试。
 
 
